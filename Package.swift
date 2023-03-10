@@ -22,7 +22,8 @@ let package = Package(
             name: "Moya",
             dependencies: [
                 .product(name: "Alamofire", package: "Alamofire")
-            ]
+            ],
+            path: "Sources"
         ),
         .testTarget(
             name: "MoyaTests",
