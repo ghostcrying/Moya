@@ -2,40 +2,16 @@
   <img height="160" src="web/logo_github.png" />
 </p>
 
-# Moya 1.0.0
 
-[![CircleCI](https://img.shields.io/circleci/project/github/Moya/Moya/master.svg)](https://circleci.com/gh/Moya/Moya/tree/master)
-[![codecov.io](https://codecov.io/github/Moya/Moya/coverage.svg?branch=master)](https://codecov.io/github/Moya/Moya?branch=master)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Accio supported](https://img.shields.io/badge/Accio-supported-0A7CF5.svg?style=flat)](https://github.com/JamitLabs/Accio)
-[![CocoaPods compatible](https://img.shields.io/cocoapods/v/Moya.svg)](https://cocoapods.org/pods/Moya)
-[![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
+# Fork Moya
+
+Origin link: https://github.com/Moya/Moya.git
+
+Moya纯净版本代码, 去除Rx, Combine相关使用
 
 
 
-你是个聪明的开发者。你可能使用 [Alamofire](https://github.com/Alamofire/Alamofire) 来抽象对 `URLSession` 的访问，以及所有那些你并不关心的糟糕细节。但是接下来，就像许多聪明开发者一样，你编写专有的网络抽象层，它们可能被称作 "APIManager" 或 "NetworkModel"，它们的下场总是很惨。
-
-在 iOS app 中，专有网络层非常常见，但它们有以下缺点：
-
-- 编写新项目很困难（「我从哪儿开始呢？」）
-- 维护现有的项目很困难（「天啊，这一团糟……」）
-- 编写单元测试很困难（「我该怎么做呢？」）
-
-所以 Moya 的基本思想是，提供一些网络抽象层，它们经过充分地封装，并直接调用 Alamofire。它们应该足够简单，可以很轻松地应对常见任务，也应该足够全面，应对复杂任务也同样容易。
-
-> 如果你使用 Alamofire 来抽象 `URLSession`, 那为什么不使用某些方式来进一步抽象 URLs 和 parameters 等等的本质呢？
-
-Moya 的一些特色功能：
-
-- 编译时检查正确的 API 端点访问。
-
-- 允许你使用枚举关联值定义不同端点的明确用法。
-
-- 将 test stub 视为一等公民，所以单元测试超级简单。
-
-  
-
-## 安装
+## Installation
 
 ### Swift Package Manager
 
@@ -76,7 +52,7 @@ let package = Package(
 在你的 Podfile 文件中添加 Moya：
 
 ```rb
-pod 'Moya', '~> 1.0.0'
+pod 'Moya', :git => 'https://github.com/ghostcrying/Moya.git', :tag => '1.0.0'
 ```
 
 然后运行 `pod install`。
@@ -85,12 +61,12 @@ pod 'Moya', '~> 1.0.0'
 
 ### Carthage
 
-Carthage 用户可以指向这个仓库并使用他们喜欢的生成框架，`Moya`，`RxMoya` 或者 `ReactiveMoya`。
+Carthage 用户可以指向这个仓库并使用他们喜欢的生成框架，`Moya`
 
 在你的 Cartfile 中添加下面的代码：
 
 ```
-github "Moya/Moya" ~> 1.0.0
+github "ghostcrying/Moya" ~> 1.0.0
 ```
 
 然后运行 `carthage update --use-xcframeworks`。
